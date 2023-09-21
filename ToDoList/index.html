@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Set the character set encoding for the document -->
+    <meta charset="UTF-8">
+    <!-- For compatibility with IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- To control the page's dimensions and scaling on mobile browsers -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage -->
+    <title>ToDo list</title>
+
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="css/mystyle.css">
+</head>
+
+<body>
+    <!-- Centered main container for the to-do list -->
+    <div class="center-div">
+        <!-- Title section of the to-do list -->
+        <div class="title">
+            <h2>Abdul's To Do list</h2>
+        </div>
+
+        <!-- Main container for all the to-do items -->
+        <div class="todos" id="todos">
+            <!-- A single to-do item -->
+            <div class="todo" id="item1">
+                <!-- Checkbox for marking the to-do as complete/incomplete -->
+                <input type="checkbox" id="todocheck1"/>
+                <!-- Custom checkmark symbol for the to-do item, toggles completion status when clicked -->
+                <span class="checkmark" onclick="TaskChange(1)"></span>
+                <!-- Text input for entering/editing the to-do item's text -->
+                <input type="text" id="todotext1"/>
+                <!-- Button to delete the to-do item -->
+                <input type="button" class="delete-button" value="X" onclick="DeleteTodo(1)"/>
+            </div>
+        </div>
+
+        <!-- Button to add a new to-do item -->
+        <input type="button" class="add-button" value="+" onclick="AddTodo()"/>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="scripts/todo.js"></script>
+
+</body>
+</html>

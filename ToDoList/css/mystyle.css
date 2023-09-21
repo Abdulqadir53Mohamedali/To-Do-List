@@ -1,0 +1,121 @@
+/* Padding explanation for those unfamiliar with CSS shorthand:
+   1 number: applies to all sides
+   2 numbers: first = top/bottom, second = left/right
+   3 numbers: first = top, second = right, third = bottom (left will be the same as the right)
+   4 numbers: first = top, second = right, third = bottom, fourth = left
+*/
+
+/* Basic body styles */
+body {
+    width: 100%; /* Make sure the body takes the full width */
+    font-family: Arial, Helvetica, sans-serif; /* Set a default font for the body */
+    text-transform: uppercase; /* Convert all text to uppercase */
+}
+
+/* Centered division styling */
+.center-div {
+    position: absolute; /* Positioning relative to its nearest positioned ancestor */
+    top: 20%; /* Distance from the top of the viewport */
+    left: 30%; /* Distance from the left of the viewport */
+    width: 40%; /* Set width to 40% of the parent container */
+}
+
+/* Title styling */
+.title {
+    background-color: #AB39CF; 
+    padding: 40px 20px; /* 40px top/bottom, 20px left/right padding */
+    border: 5px solid black; 
+    border-radius: 10px 10px 0 0; /* Rounded corners on the top */
+    color: gold;
+}
+
+/* Title text styling */
+.title h2 {
+    font-size: 2em; /* 2x the current font size */
+    margin: 0; /* Reset margin */
+}
+
+/* To-dos container styling */
+.todos {
+    margin-top: 10px;
+    padding: 40px 25px; 
+    background-color: #AB39CF;
+    border: 5px solid black;
+    border-radius: 0 0 10px 10px; /* Rounded corners on the bottom */
+}
+
+/* Individual to-do item styling */
+.todo {
+    display: block;
+    position: relative; /* To position child elements like the checkbox */
+    padding-left: 35px; 
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+
+/* To-do checkbox styling */
+.todo input[type=checkbox] {
+    position: absolute; 
+    opacity: 0; /* Make it invisible but clickable */
+    cursor: pointer; 
+    height: 0; 
+    width: 0; 
+}
+
+/* Change the appearance of the custom checkbox when the actual checkbox is checked */
+.todo input[type=checkbox]:checked ~ .checkmark {
+    background-color: gold;
+}
+
+/* To-do input field styling */
+.todo input[type=text] {
+    border: 1px solid #D0CECE;
+    padding: 5px;
+    width: 85%;
+    margin: 0px 20px;
+    font-size: 1.2em;
+    vertical-align: top;
+}
+
+/* Style for completed tasks */
+.todo input[type=text].complete {
+    text-decoration: line-through; /* Strike through text */
+    color: #a6a6a6; 
+}
+
+/* To-do button styling */
+.todo input[type=button] {
+    cursor: pointer; /* Change the cursor to a hand when hovered */
+}
+
+/* Delete button styling */
+.delete-button {
+    background-color: #AB39CF;
+    color: #ff0000;
+    font-size: 1.6em;
+    border: 0;
+}
+
+/* Custom checkbox design */
+.checkmark {
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background-color: grey;
+    border: 5px solid black;
+    border-radius: 50%; /* Makes it circular */
+}
+
+/* Add button styling */
+.add-button {
+    background-color: #ffC000;
+    border-radius: 50%; /* Makes it circular */
+    font-size: 4em;
+    width: 75px;
+    height: 75px;
+    position: absolute; 
+    bottom: -35px; /* Half of its height to make it look like it's emerging from the bottom */
+    left: 45%; /* Roughly centers the button */
+}
